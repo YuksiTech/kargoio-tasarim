@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kargoio · Uygulama Tasarım Taslakları</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--zemin:#F1F0EC;--metin:#0E0E12;--ikincil:#5E5F66;--kirmizi:#E2001A;--cizgi:#E2E1DC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--metin);font-family:'Figtree',system-ui,sans-serif}
+main{max-width:1500px;margin:0 auto;padding:40px 16px 64px}
+.ust{padding:8px 8px 24px}
+.logo{height:40px;width:auto;mix-blend-mode:multiply}
+h1{font-family:'Outfit',sans-serif;font-weight:300;font-size:clamp(30px,5vw,52px);letter-spacing:-1px;margin:22px 0 8px}
+.ust p{color:var(--ikincil);margin:0;font-size:16px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+nav a{color:var(--metin);text-decoration:none;font-size:14px;font-weight:500;background:#fff;border:1px solid var(--cizgi);border-radius:999px;padding:8px 14px}
+nav a:hover{border-color:var(--metin)}
+section{margin-top:40px}
+.bolum{display:flex;gap:16px;align-items:flex-start;padding:0 8px}
+.harf{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--metin);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:22px}
+h2{font-family:'Outfit',sans-serif;font-weight:400;font-size:28px;margin:4px 0 4px;letter-spacing:-.4px}
+.bolum p{margin:0;color:var(--ikincil);max-width:760px}
+.rozet{display:inline-block;vertical-align:middle;font-family:'Figtree',sans-serif;font-size:12px;font-weight:600;color:#fff;background:var(--kirmizi);border-radius:999px;padding:4px 10px;margin-left:6px}
+.sira{display:flex;gap:28px;overflow-x:auto;padding:22px 8px 12px;scroll-snap-type:x mandatory}
+.ekran{margin:0;flex:0 0 auto;scroll-snap-align:start}
+.cerceve{width:312px;height:675px;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 50px rgba(14,14,18,.14),0 0 0 1px rgba(14,14,18,.06)}
+.cerceve iframe{width:390px;height:844px;border:0;transform:scale(.8);transform-origin:0 0}
+figcaption{display:flex;justify-content:space-between;margin-top:12px;font-size:14px;font-weight:600;padding:0 6px}
+figcaption a{color:var(--ikincil);font-weight:500;text-decoration:none}
+figcaption a:hover{color:var(--metin)}
+footer{margin-top:56px;color:var(--ikincil);font-size:13px;padding:0 8px}
+</style>
+</head>
+<body>
+<main>
+  <header class="ust">
+    <img src="assets/logo.png" alt="Kargoio" class="logo">
+    <h1>Uygulama tasarım taslakları</h1>
+    <p>Kurumsal, bayi ve yönetim tek uygulamada. Ekranlardaki isim, tutar ve fiyatlar örnek veridir.</p>
+    <nav><a href="#F">F · Kargoio</a> <a href="#E">E · io</a> <a href="#D">D · Kargoio Global</a> <a href="#A">A · Gece Kırmızısı</a> <a href="#B">B · Canlı Durum</a> <a href="#C">C · Kırmızı Enerji</a></nav>
+  </header>
+  <section id="F"><header class="bolum"><span class="harf">F</span><div><h2>Kargoio <span class="rozet">Önerilen</span></h2><p>Hepsinin harmanı. Logodaki io işareti, canlı Şimdi kartı, WhatsApp'tan kargo, etiket hazır anı ve koyu temalı yönetim.</p></div></header><div class="sira"><figure class="ekran"><div class="cerceve"><iframe src="ekranlar/F-Giris.html" title="F · Giriş" loading="lazy" scrolling="no"></iframe></div><figcaption>Giriş <a href="ekranlar/F-Giris.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/F-Ana.html" title="F · Ana sayfa" loading="lazy" scrolling="no"></iframe></div><figcaption>Ana sayfa <a href="ekranlar/F-Ana.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/F-Gonder.html" title="F · Kargo gönder" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo gönder <a href="ekranlar/F-Gonder.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/F-Etiket.html" title="F · Etiket hazır" loading="lazy" scrolling="no"></iframe></div><figcaption>Etiket hazır <a href="ekranlar/F-Etiket.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/F-Takip.html" title="F · Kargo takip" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo takip <a href="ekranlar/F-Takip.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/F-Onay.html" title="F · Yönetim" loading="lazy" scrolling="no"></iframe></div><figcaption>Yönetim <a href="ekranlar/F-Onay.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure></div></section><section id="E"><header class="bolum"><span class="harf">E</span><div><h2>io </h2><p>Logonun i / o işaretinden doğan tasarım: nokta başlangıç, eğik çizgi yol, halka varış. Kırmızı-beyaz, sade.</p></div></header><div class="sira"><figure class="ekran"><div class="cerceve"><iframe src="ekranlar/E-Giris.html" title="E · Giriş" loading="lazy" scrolling="no"></iframe></div><figcaption>Giriş <a href="ekranlar/E-Giris.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/E-Ana.html" title="E · Ana sayfa" loading="lazy" scrolling="no"></iframe></div><figcaption>Ana sayfa <a href="ekranlar/E-Ana.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/E-Gonder.html" title="E · Kargo gönder" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo gönder <a href="ekranlar/E-Gonder.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/E-Takip.html" title="E · Kargo takip" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo takip <a href="ekranlar/E-Takip.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/E-Onay.html" title="E · Yönetim" loading="lazy" scrolling="no"></iframe></div><figcaption>Yönetim <a href="ekranlar/E-Onay.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure></div></section><section id="D"><header class="bolum"><span class="harf">D</span><div><h2>Kargoio Global </h2><p>Logoya yakın geometrik yazı, ince iri rakamlar, firma karşılaştırmalı kargo gönderme.</p></div></header><div class="sira"><figure class="ekran"><div class="cerceve"><iframe src="ekranlar/D-Giris.html" title="D · Giriş" loading="lazy" scrolling="no"></iframe></div><figcaption>Giriş <a href="ekranlar/D-Giris.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/D-Ana.html" title="D · Ana sayfa" loading="lazy" scrolling="no"></iframe></div><figcaption>Ana sayfa <a href="ekranlar/D-Ana.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/D-Gonder.html" title="D · Kargo gönder" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo gönder <a href="ekranlar/D-Gonder.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/D-Takip.html" title="D · Kargo takip" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo takip <a href="ekranlar/D-Takip.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/D-Onay.html" title="D · Yönetim" loading="lazy" scrolling="no"></iframe></div><figcaption>Yönetim <a href="ekranlar/D-Onay.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure></div></section><section id="A"><header class="bolum"><span class="harf">A</span><div><h2>Gece Kırmızısı </h2><p>Koyu, lüks, sakin. Sistem yazı tipi.</p></div></header><div class="sira"><figure class="ekran"><div class="cerceve"><iframe src="ekranlar/Main.html" title="A · Giriş" loading="lazy" scrolling="no"></iframe></div><figcaption>Giriş <a href="ekranlar/Main.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/A-Ana.html" title="A · Ana sayfa" loading="lazy" scrolling="no"></iframe></div><figcaption>Ana sayfa <a href="ekranlar/A-Ana.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/A-Takip.html" title="A · Kargo takip" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo takip <a href="ekranlar/A-Takip.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/A-Onay.html" title="A · Yönetim" loading="lazy" scrolling="no"></iframe></div><figcaption>Yönetim <a href="ekranlar/A-Onay.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure></div></section><section id="B"><header class="bolum"><span class="harf">B</span><div><h2>Canlı Durum </h2><p>Net ve akıllı; canlı durum kartı ve şehir kodlu rota çizgisi.</p></div></header><div class="sira"><figure class="ekran"><div class="cerceve"><iframe src="ekranlar/B-Giris.html" title="B · Giriş" loading="lazy" scrolling="no"></iframe></div><figcaption>Giriş <a href="ekranlar/B-Giris.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/B-Ana.html" title="B · Ana sayfa" loading="lazy" scrolling="no"></iframe></div><figcaption>Ana sayfa <a href="ekranlar/B-Ana.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/B-Takip.html" title="B · Kargo takip" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo takip <a href="ekranlar/B-Takip.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/B-Onay.html" title="B · Yönetim" loading="lazy" scrolling="no"></iframe></div><figcaption>Yönetim <a href="ekranlar/B-Onay.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure></div></section><section id="C"><header class="bolum"><span class="harf">C</span><div><h2>Kırmızı Enerji </h2><p>Sıcak ve cesur; büyük kutular, tam kırmızı başlıklar.</p></div></header><div class="sira"><figure class="ekran"><div class="cerceve"><iframe src="ekranlar/C-Giris.html" title="C · Giriş" loading="lazy" scrolling="no"></iframe></div><figcaption>Giriş <a href="ekranlar/C-Giris.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/C-Ana.html" title="C · Ana sayfa" loading="lazy" scrolling="no"></iframe></div><figcaption>Ana sayfa <a href="ekranlar/C-Ana.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/C-Takip.html" title="C · Kargo takip" loading="lazy" scrolling="no"></iframe></div><figcaption>Kargo takip <a href="ekranlar/C-Takip.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>
+<figure class="ekran"><div class="cerceve"><iframe src="ekranlar/C-Onay.html" title="C · Yönetim" loading="lazy" scrolling="no"></iframe></div><figcaption>Yönetim <a href="ekranlar/C-Onay.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure></div></section>
+  <footer>Kargoio · Ekim 2026</footer>
+</main>
+</body>
+</html>
