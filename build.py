@@ -11,18 +11,20 @@ CIKTI = KOK / "ekranlar"
 LOGO_BLOB = re.compile(r"/_blob/[0-9a-f]{32}")
 
 TASLAKLAR = [
-    ("F", "Kargoio", "Hepsinin harmanı. Logodaki io işareti, canlı Şimdi kartı, WhatsApp'tan kargo, etiket hazır anı ve koyu temalı yönetim.", True,
+    ("G", "Kargoio Premium", "F ve C'nin harmanı: krem zemin, kırmızı başlık blokları ve büyük kutular; ince iri rakamlar, logodaki io işareti, canlı Şimdi kartı, WhatsApp'tan kargo, kart kart onaylanan koyu yönetim.", "Önerilen",
+     [("G-Giris", "Giriş"), ("G-Ana", "Ana sayfa"), ("G-Gonder", "Kargo gönder"), ("G-Etiket", "Etiket hazır"), ("G-Takip", "Kargo takip"), ("G-Onay", "Yönetim")]),
+    ("F", "Kargoio", "Hepsinin harmanı. Logodaki io işareti, canlı Şimdi kartı, WhatsApp'tan kargo, etiket hazır anı ve koyu temalı yönetim.", "İşveren beğendi",
      [("F-Giris", "Giriş"), ("F-Ana", "Ana sayfa"), ("F-Gonder", "Kargo gönder"), ("F-Etiket", "Etiket hazır"), ("F-Takip", "Kargo takip"), ("F-Onay", "Yönetim")]),
-    ("E", "io", "Logonun i / o işaretinden doğan tasarım: nokta başlangıç, eğik çizgi yol, halka varış. Kırmızı-beyaz, sade.", False,
-     [("E-Giris", "Giriş"), ("E-Ana", "Ana sayfa"), ("E-Gonder", "Kargo gönder"), ("E-Takip", "Kargo takip"), ("E-Onay", "Yönetim")]),
-    ("D", "Kargoio Global", "Logoya yakın geometrik yazı, ince iri rakamlar, firma karşılaştırmalı kargo gönderme.", False,
-     [("D-Giris", "Giriş"), ("D-Ana", "Ana sayfa"), ("D-Gonder", "Kargo gönder"), ("D-Takip", "Kargo takip"), ("D-Onay", "Yönetim")]),
-    ("A", "Gece Kırmızısı", "Koyu, lüks, sakin. Sistem yazı tipi.", False,
-     [("Main", "Giriş"), ("A-Ana", "Ana sayfa"), ("A-Takip", "Kargo takip"), ("A-Onay", "Yönetim")]),
-    ("B", "Canlı Durum", "Net ve akıllı; canlı durum kartı ve şehir kodlu rota çizgisi.", False,
-     [("B-Giris", "Giriş"), ("B-Ana", "Ana sayfa"), ("B-Takip", "Kargo takip"), ("B-Onay", "Yönetim")]),
-    ("C", "Kırmızı Enerji", "Sıcak ve cesur; büyük kutular, tam kırmızı başlıklar.", False,
+    ("C", "Kırmızı Enerji", "Sıcak ve cesur; büyük kutular, tam kırmızı başlıklar.", "İşveren beğendi",
      [("C-Giris", "Giriş"), ("C-Ana", "Ana sayfa"), ("C-Takip", "Kargo takip"), ("C-Onay", "Yönetim")]),
+    ("E", "io", "Logonun i / o işaretinden doğan tasarım: nokta başlangıç, eğik çizgi yol, halka varış. Kırmızı-beyaz, sade.", "",
+     [("E-Giris", "Giriş"), ("E-Ana", "Ana sayfa"), ("E-Gonder", "Kargo gönder"), ("E-Takip", "Kargo takip"), ("E-Onay", "Yönetim")]),
+    ("D", "Kargoio Global", "Logoya yakın geometrik yazı, ince iri rakamlar, firma karşılaştırmalı kargo gönderme.", "",
+     [("D-Giris", "Giriş"), ("D-Ana", "Ana sayfa"), ("D-Gonder", "Kargo gönder"), ("D-Takip", "Kargo takip"), ("D-Onay", "Yönetim")]),
+    ("A", "Gece Kırmızısı", "Koyu, lüks, sakin. Sistem yazı tipi.", "",
+     [("Main", "Giriş"), ("A-Ana", "Ana sayfa"), ("A-Takip", "Kargo takip"), ("A-Onay", "Yönetim")]),
+    ("B", "Canlı Durum", "Net ve akıllı; canlı durum kartı ve şehir kodlu rota çizgisi.", "",
+     [("B-Giris", "Giriş"), ("B-Ana", "Ana sayfa"), ("B-Takip", "Kargo takip"), ("B-Onay", "Yönetim")]),
 ]
 
 HEAD = """<!doctype html>
@@ -62,7 +64,7 @@ def galeri() -> str:
             f'<figcaption>{etiket} <a href="ekranlar/{dosya}.html" target="_blank" rel="noopener">Tam ekran ↗</a></figcaption></figure>'
             for dosya, etiket in ekranlar
         )
-        rozet = '<span class="rozet">Önerilen</span>' if onerilen else ""
+        rozet = f'<span class="rozet{" ikincil" if onerilen != "Önerilen" else ""}">{onerilen}</span>' if onerilen else ""
         bolumler.append(
             f'<section id="{harf}"><header class="bolum"><span class="harf">{harf}</span><div><h2>{ad} {rozet}</h2><p>{aciklama}</p></div></header>'
             f'<div class="sira">{kartlar}</div></section>'
@@ -102,6 +104,7 @@ section{margin-top:40px}
 .harf{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--metin);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:22px}
 h2{font-family:'Outfit',sans-serif;font-weight:400;font-size:28px;margin:4px 0 4px;letter-spacing:-.4px}
 .bolum p{margin:0;color:var(--ikincil);max-width:760px}
+.rozet.ikincil{background:#0E0E12}
 .rozet{display:inline-block;vertical-align:middle;font-family:'Figtree',sans-serif;font-size:12px;font-weight:600;color:#fff;background:var(--kirmizi);border-radius:999px;padding:4px 10px;margin-left:6px}
 .sira{display:flex;gap:28px;overflow-x:auto;padding:22px 8px 12px;scroll-snap-type:x mandatory}
 .ekran{margin:0;flex:0 0 auto;scroll-snap-align:start}
