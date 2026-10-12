@@ -13,6 +13,10 @@ LOGO_BLOB = re.compile(r"/_blob/[0-9a-f]{32}")
 TASLAKLAR = [
     ("G", "Kargoio Premium", "F ve C'nin harmanı: krem zemin, kırmızı başlık blokları ve büyük kutular; ince iri rakamlar, logodaki io işareti, canlı Şimdi kartı, WhatsApp'tan kargo, kart kart onaylanan koyu yönetim.", "Önerilen",
      [("G-Giris", "Giriş"), ("G-Ana", "Ana sayfa"), ("G-Gonder", "Kargo gönder"), ("G-Etiket", "Etiket hazır"), ("G-Takip", "Kargo takip"), ("G-Onay", "Yönetim")]),
+    ("H", "Kırmızı Enerji+", "C ağırlıklı: krem zemin, tam kırmızı bloklar, büyük kutular, kutu çizimleri ve kalın yazı; F'den canlı kargo kartı, WhatsApp'tan kargo, io işareti ve etiket hazır anı.", "C ağırlıklı",
+     [("H-Giris", "Giriş"), ("H-Ana", "Ana sayfa"), ("H-Gonder", "Kargo gönder"), ("H-Etiket", "Etiket hazır"), ("H-Takip", "Kargo takip"), ("H-Onay", "Yönetim")]),
+    ("I", "Kargoio Gece", "F ağırlıklı: koyu giriş, ince iri rakamlar, harita ve koyu yönetim; C'den büyük kırmızı Kargo gönder kutusu, pembe kutular, kalın adım çubukları ve kutu çizimi.", "F ağırlıklı",
+     [("I-Giris", "Giriş"), ("I-Ana", "Ana sayfa"), ("I-Gonder", "Kargo gönder"), ("I-Etiket", "Etiket hazır"), ("I-Takip", "Kargo takip"), ("I-Onay", "Yönetim")]),
     ("F", "Kargoio", "Hepsinin harmanı. Logodaki io işareti, canlı Şimdi kartı, WhatsApp'tan kargo, etiket hazır anı ve koyu temalı yönetim.", "İşveren beğendi",
      [("F-Giris", "Giriş"), ("F-Ana", "Ana sayfa"), ("F-Gonder", "Kargo gönder"), ("F-Etiket", "Etiket hazır"), ("F-Takip", "Kargo takip"), ("F-Onay", "Yönetim")]),
     ("C", "Kırmızı Enerji", "Sıcak ve cesur; büyük kutular, tam kırmızı başlıklar.", "İşveren beğendi",
